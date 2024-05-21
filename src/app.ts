@@ -14,12 +14,4 @@ app.get('/', (req: Request, res: Response) => {
   res.send('Hello World!')
 })
 
-
-
-
-
-
-
-
-
-                                                            export default appsa
+export default appsasfs
