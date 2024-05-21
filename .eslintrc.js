@@ -38,11 +38,6 @@ module.exports = [
     globals: {
       process: 'readonly',
     },
-        ignorePatterns: [
-    'dist/',
-    'node_modules/',
-    '.env',
-  ],
+    ignorePatterns: ['dist/', 'node_modules/', '.env'],
   },
-];
-
+]
