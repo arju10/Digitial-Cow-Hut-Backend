@@ -3,7 +3,7 @@ module.exports = [
     files: ['*.ts'],
     parser: '@typescript-eslint/parser',
     parserOptions: {
-      ecmaVersion: 13,
+      ecmaVersion: 12,
       sourceType: 'module',
     },
     plugins: ['@typescript-eslint'],
