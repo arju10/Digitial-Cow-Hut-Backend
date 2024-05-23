@@ -1,4 +1,5 @@
 import { Model } from 'mongoose'
+import { ENUM_USER_ROLE } from '../../../enums/user'
 
 export type UserName = {
   firstName: string
@@ -7,7 +8,7 @@ export type UserName = {
 export type IUser = {
   // id: string
   password: string
-  role: 'buyer' | 'seller' | 'admin'
+  role: ENUM_USER_ROLE
   name: UserName
   phoneNumber: string
   address: string

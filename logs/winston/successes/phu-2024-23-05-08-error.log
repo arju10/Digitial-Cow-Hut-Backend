@@ -1,0 +1,12 @@
+Thu May 23 2024 8:15:54 } [PH] error: globalErrorHandler ~ [
+  {
+    "expected": "'seller' | 'buyer' | 'admin'",
+    "received": "undefined",
+    "code": "invalid_type",
+    "path": [
+      "body",
+      "role"
+    ],
+    "message": "Role is required"
+  }
+]
