@@ -5,7 +5,7 @@ export type UserName = {
   lastName: string
 }
 export type IUser = {
-  // id: string
+  id: string
   password: string
   role: 'buyer' | 'seller' | 'admin'
   name: UserName

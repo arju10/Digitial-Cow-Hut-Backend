@@ -2,6 +2,7 @@ import cors from 'cors'
 import express, { Application, Request, Response } from 'express'
 import routes from './app/routes'
 import ApiError from './errors/ApiError'
+import globalErrorHandler from './app/middlewares/globalErrorHandler'
 const app: Application = express()
 const port = 3000
 
@@ -23,5 +24,8 @@ app.get('/', (req: Request, res: Response) => {
 // app.get('/', (req: Request, res: Response) => {
 //   res.send('Hello World!')
 // })
+
+// Global Error Handler
+app.use(globalErrorHandler)
 
 export default app

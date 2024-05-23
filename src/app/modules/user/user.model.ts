@@ -3,10 +3,10 @@ import { IUser, UserModel } from './user.interface'
 
 const userSchema = new Schema<IUser, UserModel>(
   {
-    // id: {
-    //   type: String,
-    //   required: true,
-    // },
+    id: {
+      type: String,
+      required: true,
+    },
     password: {
       type: String,
       required: true,
