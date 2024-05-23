@@ -2,3 +2,7 @@ Thu May 23 2024 6:33:23 } [PH] error: globalErrorHandler ~ User validation faile
 Thu May 23 2024 6:35:31 } [PH] error: globalErrorHandler ~ User validation failed: id: Path `id` is required.
 Thu May 23 2024 6:40:8 } [PH] error: globalErrorHandler ~ User validation failed: id: Path `id` is required.
 Thu May 23 2024 6:42:57 } [PH] error: globalErrorHandler ~ User validation failed: id: Path `id` is required.
+Thu May 23 2024 6:44:32 } [PH] error: globalErrorHandler ~ Ore Baba Error
+Thu May 23 2024 6:54:9 } [PH] error: The "listener" argument must be of type function. Received undefined
+Thu May 23 2024 6:54:16 } [PH] error: err is not defined
+Thu May 23 2024 6:58:33 } [PH] error: globalErrorHandler ~ ApiError is not defined
