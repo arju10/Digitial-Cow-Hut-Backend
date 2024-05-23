@@ -1,1 +1,4 @@
 Thu May 23 2024 7:1:31 } [PH] error: globalErrorHandler ~ Ore Baba Error
+Thu May 23 2024 7:8:47 } [PH] error: globalErrorHandler ~ User validation failed: id: Path `id` is required.
+Thu May 23 2024 7:25:10 } [PH] error: globalErrorHandler ~ User validation failed: role: Path `role` is required.
+Thu May 23 2024 7:25:43 } [PH] error: globalErrorHandler ~ User validation failed: id: Path `id` is required.
