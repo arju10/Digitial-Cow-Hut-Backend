@@ -1,17 +1,18 @@
-import { ErrorRequestHandler, NextFunction, Request, Response } from 'express'
+import { ErrorRequestHandler, Request, Response } from 'express'
+import { ZodError } from 'zod'
 import config from '../../config'
 import ApiError from '../../errors/ApiError'
+import handleCastError from '../../errors/handleCastError'
+import handleDuplicateError from '../../errors/handleDuplicateError'
 import handleValidationError from '../../errors/handleValidationError'
-
+import handleZodError from '../../errors/handleZodError'
 import { IGenericErrorMessage } from '../../interface/error'
 import { errorLogger } from '../../shared/logger'
 
-// Global Error Handler
 const globalErrorHandler: ErrorRequestHandler = (
   error,
   req: Request,
   res: Response,
-  next: NextFunction,
 ) => {
   config.env === 'development'
     ? console.log('globalErrorHandler ~', { error })
@@ -23,6 +24,21 @@ const globalErrorHandler: ErrorRequestHandler = (
 
   if (error?.name === 'ValidationError') {
     const simplifiedError = handleValidationError(error)
+    statusCode = simplifiedError.statusCode
+    message = simplifiedError.message
+    errorMessages = simplifiedError.errorMessages
+  } else if (error instanceof ZodError) {
+    const simplifiedError = handleZodError(error)
+    statusCode = simplifiedError.statusCode
+    message = simplifiedError.message
+    errorMessages = simplifiedError.errorMessages
+  } else if (error?.name === 'CastError') {
+    const simplifiedError = handleCastError(error)
+    statusCode = simplifiedError.statusCode
+    message = simplifiedError.message
+    errorMessages = simplifiedError.errorMessages
+  } else if (error?.code === 11000) {
+    const simplifiedError = handleDuplicateError(error)
     statusCode = simplifiedError.statusCode
     message = simplifiedError.message
     errorMessages = simplifiedError.errorMessages

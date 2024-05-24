@@ -1,0 +1,15 @@
+Fri May 24 2024 5:35:52 } [PH] error: globalErrorHandler ~ Seller validation failed: income: Path `income` is required., address: Path `address` is required., phoneNumber: Path `phoneNumber` is required., name: Path `name` is required., id: Path `id` is required.
+Fri May 24 2024 5:36:55 } [PH] error: globalErrorHandler ~ Seller validation failed: income: Path `income` is required., address: Path `address` is required., phoneNumber: Path `phoneNumber` is required., name: Path `name` is required., id: Path `id` is required.
+Fri May 24 2024 5:37:6 } [PH] error: globalErrorHandler ~ Seller validation failed: income: Path `income` is required., address: Path `address` is required., phoneNumber: Path `phoneNumber` is required., name: Path `name` is required., id: Path `id` is required.
+Fri May 24 2024 5:42:1 } [PH] error: globalErrorHandler ~ [
+  {
+    "code": "invalid_type",
+    "expected": "object",
+    "received": "undefined",
+    "path": [
+      "body",
+      "seller"
+    ],
+    "message": "Required"
+  }
+]

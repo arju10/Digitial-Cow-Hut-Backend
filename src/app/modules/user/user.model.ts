@@ -6,7 +6,7 @@ const userSchema = new Schema<IUser, UserModel>(
     // id: {
     //   type: String,
     //   required: true,
-    //   unique:true
+    //   unique: true,
     // },
     password: {
       type: String,
@@ -17,7 +17,6 @@ const userSchema = new Schema<IUser, UserModel>(
       required: true,
     },
     name: {
-      required: true,
       type: {
         firstName: {
           type: String,
@@ -28,21 +27,28 @@ const userSchema = new Schema<IUser, UserModel>(
           required: true,
         },
       },
+      required: true,
     },
+
     phoneNumber: {
       type: String,
-      required: true,
       unique: true,
+      required: true,
     },
+
     address: {
       type: String,
       required: true,
     },
+    income: {
+      type: Number,
+    },
     budget: {
       type: Number,
     },
-    income: {
-      type: Number,
+
+    profileImage: {
+      type: String,
     },
   },
   {
