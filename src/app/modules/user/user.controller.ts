@@ -18,6 +18,19 @@ const createUser = catchAsync(async (req: Request, res: Response) => {
   })
 })
 
+// Get Single User By ID ==== API: ("/api/v1/users/:id") === Method :[ GET]
+const getSingleUser = catchAsync(async (req: Request, res: Response) => {
+  const { id } = req.params
+  const result = await UserServices.getSingleUser(id)
+
+  sendResponse<IUser>(res, {
+    statusCode: httpStatus.OK,
+    success: true,
+    message: 'Single user retrieved successfully',
+    data: result,
+  })
+})
 export const UserController = {
   createUser,
+  getSingleUser,
 }
