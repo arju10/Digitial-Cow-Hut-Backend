@@ -17,6 +17,6 @@ router.patch(
   validateRequest(UserValidation.updateUserZodSchema),
   UserController.updateSingleUser,
 )
-
+router.delete('/:id', UserController.deleteUser)
 router.get('/', UserController.getAllUsers)
 export const UserRoutes = router

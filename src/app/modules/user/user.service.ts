@@ -79,9 +79,15 @@ const updateSingleUser = async (
   return result
 }
 
+// Delete Single User By ID ==== API: ("/api/v1/users/:id") === Method :[ DELETE]
+const deleteUser = async (id: string): Promise<IUser | null> => {
+  const result = await User.findByIdAndDelete(id)
+  return result
+}
 export const UserServices = {
   createUser,
   getAllUsers,
   getSingleUser,
   updateSingleUser,
+  deleteUser,
 }

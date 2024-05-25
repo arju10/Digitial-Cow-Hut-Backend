@@ -63,9 +63,22 @@ const updateSingleUser = catchAsync(async (req: Request, res: Response) => {
     data: result,
   })
 })
+
+// Delete Single User By ID ==== API: ("/api/v1/users/:id") === Method :[ DELETE]
+const deleteUser = catchAsync(async (req: Request, res: Response) => {
+  const id = req.params.id
+  const result = await UserServices.deleteUser(id)
+  sendResponse<IUser>(res, {
+    statusCode: httpStatus.OK,
+    success: true,
+    message: 'User is deleted successfully',
+    data: result,
+  })
+})
 export const UserController = {
   createUser,
   getSingleUser,
   updateSingleUser,
   getAllUsers,
+  deleteUser,
 }
