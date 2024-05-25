@@ -17,4 +17,6 @@ router.patch(
   validateRequest(UserValidation.updateUserZodSchema),
   UserController.updateSingleUser,
 )
+
+router.get('/', UserController.getAllUsers)
 export const UserRoutes = router
