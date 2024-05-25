@@ -30,7 +30,22 @@ const getSingleUser = catchAsync(async (req: Request, res: Response) => {
     data: result,
   })
 })
+
+// Update Single User By ID ==== API: ("/api/v1/users/:id") === Method :[ GET]
+const updateSingleUser = catchAsync(async (req: Request, res: Response) => {
+  const { id } = req.params
+  const updatedData = req.body
+  const result = await UserServices.updateSingleUser(id, updatedData)
+
+  sendResponse<IUser>(res, {
+    statusCode: httpStatus.OK,
+    success: true,
+    message: 'User is updated successfully',
+    data: result,
+  })
+})
 export const UserController = {
   createUser,
   getSingleUser,
+  updateSingleUser,
 }
